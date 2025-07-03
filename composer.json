@@ -1,29 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "se09deluca/handoff-image-upload",
+    "description": "This is my package handoff-image-upload",
     "keywords": [
-        ":vendor_name",
+        "se09deluca",
         "laravel",
-        ":package_slug"
+        "handoff-image-upload"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/se09deluca/handoff-image-upload",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/se09deluca/handoff-image-upload/issues",
+        "source": "https://github.com/se09deluca/handoff-image-upload"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Andrea De Luca",
+            "email": "se09deluca@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
-        "filament/filament": "^3.0",
+        "filament/filament": "^3.3",
         "filament/forms": "^3.0",
-        "filament/tables": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
@@ -41,13 +40,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Se09deluca\\HandoffImageUpload\\": "src/",
+            "Se09deluca\\HandoffImageUpload\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Se09deluca\\HandoffImageUpload\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -67,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Se09deluca\\HandoffImageUpload\\HandoffImageUploadServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "HandoffImageUpload": "Se09deluca\\HandoffImageUpload\\Facades\\HandoffImageUpload"
             }
         }
     },

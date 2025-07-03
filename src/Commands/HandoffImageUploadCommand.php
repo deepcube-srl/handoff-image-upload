@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Se09deluca\HandoffImageUpload\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class HandoffImageUploadCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'handoff-image-upload';
 
     public $description = 'My command';
 
