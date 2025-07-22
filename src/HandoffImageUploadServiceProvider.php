@@ -10,10 +10,12 @@ use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Se09deluca\HandoffImageUpload\Commands\HandoffImageUploadCommand;
+use Se09deluca\HandoffImageUpload\Livewire\HandoffImageUploadComponent;
 use Se09deluca\HandoffImageUpload\Testing\TestsHandoffImageUpload;
 
 class HandoffImageUploadServiceProvider extends PackageServiceProvider
@@ -85,8 +87,13 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
             }
         }
 
+        // Register Livewire components
+        Livewire::component('handoff-image-upload', HandoffImageUploadComponent::class);
+
         // Testing
         Testable::mixin(new TestsHandoffImageUpload);
+
+        $this->registerRoutes();
     }
 
     protected function getAssetPackageName(): ?string
@@ -129,7 +136,21 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
      */
     protected function getRoutes(): array
     {
-        return [];
+        return [
+            'web',
+            'api',
+        ];
+    }
+
+    /**
+     * Register the package routes.
+     *
+     * @return void
+     */
+    protected function registerRoutes(): void
+    {
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
     }
 
     /**
