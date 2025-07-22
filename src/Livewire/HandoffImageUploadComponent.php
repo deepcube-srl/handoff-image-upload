@@ -16,9 +16,6 @@ class HandoffImageUploadComponent extends LivewireComponent implements HasForms
 
     /**
      * Set the image path and update the component state
-     *
-     * @param string $path
-     * @return void
      */
     public function setImagePath(string $path): void
     {
@@ -34,9 +31,6 @@ class HandoffImageUploadComponent extends LivewireComponent implements HasForms
 
     /**
      * Find the HandoffImageUpload component in the form
-     *
-     * @param array $forms
-     * @return HandoffImageUpload|null
      */
     protected function findHandoffImageUploadComponent(array $forms): ?HandoffImageUpload
     {
@@ -61,9 +55,6 @@ class HandoffImageUploadComponent extends LivewireComponent implements HasForms
 
     /**
      * Find the HandoffImageUpload component in the children of a component
-     *
-     * @param Component $component
-     * @return HandoffImageUpload|null
      */
     protected function findHandoffImageUploadComponentInChildren(Component $component): ?HandoffImageUpload
     {

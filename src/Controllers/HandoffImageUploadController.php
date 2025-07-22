@@ -5,8 +5,8 @@ namespace Se09deluca\HandoffImageUpload\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class HandoffImageUploadController extends Controller
 {
@@ -30,7 +30,7 @@ class HandoffImageUploadController extends Controller
     /**
      * Show the camera page for mobile devices
      *
-     * @param string $uuid
+     * @param  string  $uuid
      * @return \Illuminate\View\View
      */
     public function showCameraPage($uuid)
@@ -43,8 +43,7 @@ class HandoffImageUploadController extends Controller
     /**
      * Handle the image upload from mobile devices
      *
-     * @param \Illuminate\Http\Request $request
-     * @param string $uuid
+     * @param  string  $uuid
      * @return \Illuminate\Http\JsonResponse
      */
     public function uploadImage(Request $request, $uuid)
@@ -80,7 +79,7 @@ class HandoffImageUploadController extends Controller
     /**
      * Check if an image has been uploaded for a given UUID
      *
-     * @param string $uuid
+     * @param  string  $uuid
      * @return \Illuminate\Http\JsonResponse
      */
     public function checkUpload($uuid)

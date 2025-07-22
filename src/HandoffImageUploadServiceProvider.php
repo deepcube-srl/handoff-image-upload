@@ -11,12 +11,12 @@ use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
 use Livewire\Livewire;
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Se09deluca\HandoffImageUpload\Commands\HandoffImageUploadCommand;
 use Se09deluca\HandoffImageUpload\Livewire\HandoffImageUploadComponent;
 use Se09deluca\HandoffImageUpload\Testing\TestsHandoffImageUpload;
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class HandoffImageUploadServiceProvider extends PackageServiceProvider
 {
@@ -144,8 +144,6 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
 
     /**
      * Register the package routes.
-     *
-     * @return void
      */
     protected function registerRoutes(): void
     {

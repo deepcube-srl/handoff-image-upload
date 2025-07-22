@@ -6,18 +6,20 @@ use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Concerns\HasState;
 use Illuminate\Support\Facades\Storage;
 
-class HandoffImageUpload extends Component {
+class HandoffImageUpload extends Component
+{
     use HasState;
 
     protected string $view = 'handoff-image-upload::input';
 
     protected string $imagePath = '';
+
     protected string $imageUrl = '';
 
     public static function make(string $name): static
     {
         $component = app(static::class);
-        //$component->name($name);
+        // $component->name($name);
 
         return $component;
     }
