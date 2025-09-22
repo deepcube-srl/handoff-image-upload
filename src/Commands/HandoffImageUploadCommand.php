@@ -1,6 +1,6 @@
 <?php
 
-namespace Se09deluca\HandoffImageUpload\Commands;
+namespace Deepcube\HandoffImageUpload\Commands;
 
 use Illuminate\Console\Command;
 

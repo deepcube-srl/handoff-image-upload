@@ -1,12 +1,12 @@
 <?php
 
-namespace Se09deluca\HandoffImageUpload\Livewire;
+namespace Deepcube\HandoffImageUpload\Livewire;
 
 use Filament\Forms\Components\Component;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Livewire\Component as LivewireComponent;
-use Se09deluca\HandoffImageUpload\HandoffImageUpload;
+use Deepcube\HandoffImageUpload\HandoffImageUpload;
 
 class HandoffImageUploadComponent extends LivewireComponent implements HasForms
 {

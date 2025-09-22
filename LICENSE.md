@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) se09deluca <se09deluca@gmail.com>
+Copyright (c) deepcube <developer@deepcube.eu>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

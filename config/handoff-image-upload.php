@@ -1,6 +1,6 @@
 <?php
 
-// config for Se09deluca/HandoffImageUpload
+// config for Deepcube/HandoffImageUpload
 return [
 
 ];

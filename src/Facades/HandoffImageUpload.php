@@ -1,16 +1,16 @@
 <?php
 
-namespace Se09deluca\HandoffImageUpload\Facades;
+namespace Deepcube\HandoffImageUpload\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Se09deluca\HandoffImageUpload\HandoffImageUpload
+ * @see \Deepcube\HandoffImageUpload\HandoffImageUpload
  */
 class HandoffImageUpload extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Se09deluca\HandoffImageUpload\HandoffImageUpload::class;
+        return \Deepcube\HandoffImageUpload\HandoffImageUpload::class;
     }
 }

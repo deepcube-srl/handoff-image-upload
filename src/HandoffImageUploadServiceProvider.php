@@ -1,6 +1,6 @@
 <?php
 
-namespace Se09deluca\HandoffImageUpload;
+namespace Deepcube\HandoffImageUpload;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
@@ -11,9 +11,10 @@ use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
 use Livewire\Livewire;
-use Se09deluca\HandoffImageUpload\Commands\HandoffImageUploadCommand;
-use Se09deluca\HandoffImageUpload\Livewire\HandoffImageUploadComponent;
-use Se09deluca\HandoffImageUpload\Testing\TestsHandoffImageUpload;
+use Deepcube\HandoffImageUpload\Commands\HandoffImageUploadCommand;
+use Deepcube\HandoffImageUpload\Commands\CleanupTempImagesCommand;
+use Deepcube\HandoffImageUpload\Livewire\HandoffImageUploadComponent;
+use Deepcube\HandoffImageUpload\Testing\TestsHandoffImageUpload;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -38,7 +39,7 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('se09deluca/handoff-image-upload');
+                    ->askToStarRepoOnGitHub('deepcube/handoff-image-upload');
             });
 
         $configFileName = $package->shortName();
@@ -98,7 +99,7 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): ?string
     {
-        return 'se09deluca/handoff-image-upload';
+        return 'deepcube/handoff-image-upload';
     }
 
     /**
@@ -120,6 +121,7 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
     {
         return [
             HandoffImageUploadCommand::class,
+            CleanupTempImagesCommand::class,
         ];
     }
 

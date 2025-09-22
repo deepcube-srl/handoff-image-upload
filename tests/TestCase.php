@@ -1,6 +1,6 @@
 <?php
 
-namespace Se09deluca\HandoffImageUpload\Tests;
+namespace Deepcube\HandoffImageUpload\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Se09deluca\HandoffImageUpload\HandoffImageUploadServiceProvider;
+use Deepcube\HandoffImageUpload\HandoffImageUploadServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -25,7 +25,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Se09deluca\\HandoffImageUpload\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Deepcube\\HandoffImageUpload\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 

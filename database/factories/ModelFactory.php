@@ -1,6 +1,6 @@
 <?php
 
-namespace Se09deluca\HandoffImageUpload\Database\Factories;
+namespace Deepcube\HandoffImageUpload\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

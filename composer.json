@@ -1,21 +1,21 @@
 {
-    "name": "se09deluca/handoff-image-upload",
+    "name": "deepcube/handoff-image-upload",
     "description": "This is my package handoff-image-upload",
     "keywords": [
-        "se09deluca",
+        "deepcube",
         "laravel",
         "handoff-image-upload"
     ],
-    "homepage": "https://github.com/se09deluca/handoff-image-upload",
+    "homepage": "https://github.com/deepcube/handoff-image-upload",
     "support": {
-        "issues": "https://github.com/se09deluca/handoff-image-upload/issues",
-        "source": "https://github.com/se09deluca/handoff-image-upload"
+        "issues": "https://github.com/deepcube/handoff-image-upload/issues",
+        "source": "https://github.com/deepcube/handoff-image-upload"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Andrea De Luca",
-            "email": "se09deluca@gmail.com",
+            "name": "Deepcube Srl",
+            "email": "developer@deepcube.eu",
             "role": "Developer"
         }
     ],
@@ -40,13 +40,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Se09deluca\\HandoffImageUpload\\": "src/",
-            "Se09deluca\\HandoffImageUpload\\Database\\Factories\\": "database/factories/"
+            "Deepcube\\HandoffImageUpload\\": "src/",
+            "Deepcube\\HandoffImageUpload\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Se09deluca\\HandoffImageUpload\\Tests\\": "tests/"
+            "Deepcube\\HandoffImageUpload\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -66,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Se09deluca\\HandoffImageUpload\\HandoffImageUploadServiceProvider"
+                "Deepcube\\HandoffImageUpload\\HandoffImageUploadServiceProvider"
             ],
             "aliases": {
-                "HandoffImageUpload": "Se09deluca\\HandoffImageUpload\\Facades\\HandoffImageUpload"
+                "HandoffImageUpload": "Deepcube\\HandoffImageUpload\\Facades\\HandoffImageUpload"
             }
         }
     },

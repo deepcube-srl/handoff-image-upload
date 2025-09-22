@@ -1,6 +1,6 @@
 <?php
 
-namespace Se09deluca\HandoffImageUpload\Testing;
+namespace Deepcube\HandoffImageUpload\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
 

@@ -1,6 +1,70 @@
 <?php
 
-// translations for Se09deluca/HandoffImageUpload
+// translations for Deepcube/HandoffImageUpload
 return [
-    //
+    // Camera page
+    'take_photo_instruction' => 'Take a photo to upload it',
+    'switch_camera' => 'Switch Camera',
+    'take_photo' => 'Take Photo',
+    'retry' => 'Retry',
+    'confirm' => 'Confirm',
+    'uuid_already_used' => 'Error: This code has already been used to upload a photo. For security reasons, each code can only be used once. Close this page and return to the form to generate a new code and upload a new image.',
+    'requesting_camera_access' => 'Requesting camera access...',
+    'camera_access_denied' => 'Camera access denied. Click the button to try again.',
+    'request_camera_access' => 'Request camera access',
+    'no_camera_found' => 'No camera found on the device.',
+    'camera_in_use' => 'The camera is already in use by another application.',
+    'camera_not_supported' => 'The camera does not support the required features.',
+    'camera_permission_required' => 'Camera access is required to use this feature.',
+    'allow_camera_access' => 'Allow camera access',
+    'camera_access_denied_settings' => 'Camera access has been denied. To use this feature, allow camera access in your browser settings.',
+    'permission_check_error' => 'Error checking permissions. Try reloading the page.',
+    'browser_no_permission_support' => 'The browser does not support automatic permission checking. Make sure to allow camera access when prompted.',
+    'try_camera_access' => 'Try to access camera',
+    'uuid_check_error' => 'Error checking UUID status. Reload the page.',
+    'camera_initialization_failed' => 'Failed to initialize camera. Please reload the page and try again.',
+    'image_upload_failed' => 'Failed to upload image. Please try again.',
+    'camera_start_error' => 'Error accessing camera. Make sure you have granted permissions.',
+    'photo_capture_error' => 'Error capturing photo',
+    'photo_capture_failed' => 'Failed to capture photo. Please try again.',
+    'no_image_to_upload' => 'No image to upload.',
+    'uploading' => 'Uploading...',
+    'image_upload_success' => 'Image uploaded successfully!',
+    'upload_success_qr' => 'Image uploaded successfully! Return to the form to complete operations. You can close this page.',
+    'upload_success_direct' => 'Image uploaded successfully! Returning to form...',
+
+    // Input component
+    'image_preview' => 'Image preview',
+    'current_uploaded_image' => 'Current uploaded image',
+    'update_image' => 'Update image',
+    'remove_image' => 'Remove image',
+    'no_image_uploaded' => 'No image uploaded. Upload an image to view it here.',
+    'no_image' => 'No image',
+    'upload_image_preview' => 'Upload an image to view its preview',
+    'upload_image' => 'Upload image',
+    'choose_upload_method' => 'Choose how to upload the image',
+    'upload_description' => 'You can take a photo or upload it directly from this device, or use another device via QR Code.',
+    'capture_upload_device' => 'Capture/Upload from this device',
+    'use_qr_code' => 'Use QR Code (other device)',
+    'scan_qr_code' => 'Scan QR Code',
+    'scan_qr_instruction' => 'Scan this QR Code with your mobile device to upload an image',
+    'image_uploaded_successfully' => 'Image uploaded successfully!',
+    'confirm_remove_image' => 'Are you sure you want to remove the image?',
+    'upload_error' => 'Error uploading image',
+    'qr_generation_error' => 'Error generating QR code',
+    'generic_error' => 'An error occurred',
+
+    // Controller messages
+    'validation_failed' => 'Validation failed',
+    'invalid_missing_image' => 'Invalid or missing image file',
+    'failed_save_image' => 'Failed to save image',
+
+    // Additional error messages
+    'blob_empty_error' => 'The image data is empty (size: 0). Please try taking the photo again.',
+    'no_internet_connection' => 'No internet connection available.',
+    'image_upload_error_with_message' => 'Error uploading image: {message}',
+    'image_too_large' => 'Image too large',
+    'image_upload_general_error' => 'Error uploading image.',
+    'server_error' => 'Server error',
+    'network_connection_error' => 'Network or connection error',
 ];

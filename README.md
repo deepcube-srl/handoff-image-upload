@@ -1,9 +1,9 @@
 # This is my package handoff-image-upload
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/se09deluca/handoff-image-upload.svg?style=flat-square)](https://packagist.org/packages/se09deluca/handoff-image-upload)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/se09deluca/handoff-image-upload/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/se09deluca/handoff-image-upload/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/se09deluca/handoff-image-upload/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/se09deluca/handoff-image-upload/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/se09deluca/handoff-image-upload.svg?style=flat-square)](https://packagist.org/packages/se09deluca/handoff-image-upload)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/deepcube/handoff-image-upload.svg?style=flat-square)](https://packagist.org/packages/deepcube/handoff-image-upload)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/deepcube/handoff-image-upload/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/deepcube/handoff-image-upload/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/deepcube/handoff-image-upload/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/deepcube/handoff-image-upload/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/deepcube/handoff-image-upload.svg?style=flat-square)](https://packagist.org/packages/deepcube/handoff-image-upload)
 
 
 
@@ -14,7 +14,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require se09deluca/handoff-image-upload
+composer require deepcube/handoff-image-upload
 ```
 
 You can publish and run the migrations with:
@@ -46,8 +46,8 @@ return [
 ## Usage
 
 ```php
-$handoffImageUpload = new Se09deluca\HandoffImageUpload();
-echo $handoffImageUpload->echoPhrase('Hello, Se09deluca!');
+$handoffImageUpload = new Deepcube\HandoffImageUpload();
+echo $handoffImageUpload->echoPhrase('Hello, Deepcube!');
 ```
 
 ## Testing
@@ -70,7 +70,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Andrea De Luca](https://github.com/se09deluca)
+- [Deepcube Srl](https://github.com/deepcube)
 - [All Contributors](../../contributors)
 
 ## License
