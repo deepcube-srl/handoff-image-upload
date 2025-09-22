@@ -14,7 +14,6 @@ class HandoffImageUploadController extends Controller
     /**
      * Generate a unique UUID for the image upload session
      *
-     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function generateUuid(Request $request)
@@ -73,7 +72,7 @@ class HandoffImageUploadController extends Controller
 
         $image = $request->file('image');
 
-        if (!$image || !$image->isValid()) {
+        if (! $image || ! $image->isValid()) {
             return response()->json([
                 'success' => false,
                 'message' => 'Invalid or missing image file',
@@ -84,7 +83,7 @@ class HandoffImageUploadController extends Controller
         try {
             $path = $image->store('handoff-images/tmp', 'public');
 
-            if (!$path) {
+            if (! $path) {
                 throw new \Exception('Failed to store image file');
             }
         } catch (\Exception $e) {

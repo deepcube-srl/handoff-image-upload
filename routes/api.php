@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Deepcube\HandoffImageUpload\Controllers\HandoffImageUploadController;
+use Illuminate\Support\Facades\Route;
 
 Route::middleware(['api'])->prefix('api')->group(function () {
     Route::post('/handoff-image-upload/generate-uuid', [HandoffImageUploadController::class, 'generateUuid'])

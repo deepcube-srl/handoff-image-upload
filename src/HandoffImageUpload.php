@@ -3,24 +3,26 @@
 namespace Deepcube\HandoffImageUpload;
 
 use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Concerns\HasState;
 use Filament\Forms\Components\Concerns\HasName;
+use Filament\Forms\Components\Concerns\HasState;
 use Illuminate\Support\Facades\Storage;
 
 class HandoffImageUpload extends Component
 {
-    use HasState;
     use HasName;
+    use HasState;
 
     protected string $view = 'handoff-image-upload::input';
 
     protected ?string $imagePath = '';
+
     protected string $imageUrl = '';
+
     protected ?string $previousState = null;
+
     protected ?string $imageToDelete = null; // Store image path to delete at save time
 
     protected string $storageDisk = 'public';
-
 
     final public function __construct(string $name)
     {
@@ -43,7 +45,7 @@ class HandoffImageUpload extends Component
                 \Log::info("Marked image for removal via afterStateUpdated: {$old}");
             }
             // Handle image replacement (when old image exists and new one is different)
-            elseif ($old && $old !== $state && !empty(trim($old))) {
+            elseif ($old && $old !== $state && ! empty(trim($old))) {
                 // Store the image that should be deleted when form is saved
                 $component->imageToDelete = $old;
                 \Log::info("Marked image for deletion via afterStateUpdated: {$old}");
@@ -149,6 +151,7 @@ class HandoffImageUpload extends Component
                     Storage::disk($this->storageDisk)->delete($path);
 
                     \Log::info("Successfully moved image from tmp to final: {$path} -> {$finalPath}");
+
                     return $finalPath;
                 }
             } catch (\Exception $e) {
@@ -164,7 +167,7 @@ class HandoffImageUpload extends Component
      */
     protected function deletePreviousImage(): void
     {
-        if (!$this->imageToDelete) {
+        if (! $this->imageToDelete) {
             return;
         }
 
@@ -173,7 +176,7 @@ class HandoffImageUpload extends Component
         try {
             if (Storage::disk($this->storageDisk)->exists($imageToDelete)) {
                 $deleted = Storage::disk($this->storageDisk)->delete($imageToDelete);
-                if (!$deleted) {
+                if (! $deleted) {
                     \Log::warning("Failed to delete previous image at form save: {$imageToDelete}");
                 } else {
                     \Log::info("Successfully deleted previous image at form save: {$imageToDelete}");
@@ -189,5 +192,4 @@ class HandoffImageUpload extends Component
             $this->imageToDelete = null;
         }
     }
-
 }

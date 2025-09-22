@@ -2,11 +2,11 @@
 
 namespace Deepcube\HandoffImageUpload\Livewire;
 
+use Deepcube\HandoffImageUpload\HandoffImageUpload;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Livewire\Component as LivewireComponent;
-use Deepcube\HandoffImageUpload\HandoffImageUpload;
 
 class HandoffImageUploadComponent extends LivewireComponent implements HasForms
 {

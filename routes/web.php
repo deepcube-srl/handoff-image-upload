@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Deepcube\HandoffImageUpload\Controllers\HandoffImageUploadController;
+use Illuminate\Support\Facades\Route;
 
 Route::middleware(['web'])->group(function () {
     Route::get('/handoff-image-upload/camera/{uuid}', [HandoffImageUploadController::class, 'showCameraPage'])

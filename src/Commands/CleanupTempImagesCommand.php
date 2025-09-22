@@ -3,8 +3,8 @@
 namespace Deepcube\HandoffImageUpload\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class CleanupTempImagesCommand extends Command
 {
@@ -26,8 +26,6 @@ class CleanupTempImagesCommand extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return int
      */
     public function handle(): int
     {
@@ -44,8 +42,9 @@ class CleanupTempImagesCommand extends Command
 
         try {
             // Check if tmp directory exists
-            if (!$disk->exists($tmpDirectory)) {
+            if (! $disk->exists($tmpDirectory)) {
                 $this->info("Directory {$tmpDirectory} does not exist. Nothing to clean up.");
+
                 return self::SUCCESS;
             }
 
@@ -54,10 +53,11 @@ class CleanupTempImagesCommand extends Command
 
             if (empty($files)) {
                 $this->info("No files found in {$tmpDirectory}");
+
                 return self::SUCCESS;
             }
 
-            $this->info("Found " . count($files) . " files in {$tmpDirectory}");
+            $this->info('Found ' . count($files) . " files in {$tmpDirectory}");
 
             $deletedCount = 0;
             $skippedCount = 0;
@@ -70,7 +70,7 @@ class CleanupTempImagesCommand extends Command
 
                     if ($lastModified < $cutoffTime) {
                         if ($dryRun) {
-                            $this->line("Would delete: {$file} (modified: " . date('Y-m-d H:i:s', $lastModified) . ")");
+                            $this->line("Would delete: {$file} (modified: " . date('Y-m-d H:i:s', $lastModified) . ')');
                             $deletedCount++;
                         } else {
                             if ($disk->delete($file)) {
@@ -96,8 +96,8 @@ class CleanupTempImagesCommand extends Command
 
             // Summary
             $this->newLine();
-            $this->info("Cleanup Summary:");
-            $this->line("- Files processed: " . count($files));
+            $this->info('Cleanup Summary:');
+            $this->line('- Files processed: ' . count($files));
 
             if ($dryRun) {
                 $this->line("- Files that would be deleted: {$deletedCount}");
@@ -109,20 +109,21 @@ class CleanupTempImagesCommand extends Command
 
             if ($errorCount > 0) {
                 $this->line("- Errors encountered: {$errorCount}");
-                $this->warn("Some errors occurred during cleanup. Check the logs for details.");
+                $this->warn('Some errors occurred during cleanup. Check the logs for details.');
             }
 
-            if (!$dryRun) {
+            if (! $dryRun) {
                 Log::info("CleanupTempImagesCommand completed: {$deletedCount} files deleted, {$skippedCount} skipped, {$errorCount} errors");
             }
 
-            $this->info("Cleanup completed successfully!");
+            $this->info('Cleanup completed successfully!');
 
             return self::SUCCESS;
 
         } catch (\Exception $e) {
-            $this->error("Fatal error during cleanup: " . $e->getMessage());
-            Log::error("CleanupTempImagesCommand fatal error: " . $e->getMessage());
+            $this->error('Fatal error during cleanup: ' . $e->getMessage());
+            Log::error('CleanupTempImagesCommand fatal error: ' . $e->getMessage());
+
             return self::FAILURE;
         }
     }
