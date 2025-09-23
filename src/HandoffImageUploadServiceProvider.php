@@ -120,7 +120,6 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            HandoffImageUploadCommand::class,
             CleanupTempImagesCommand::class,
         ];
     }
