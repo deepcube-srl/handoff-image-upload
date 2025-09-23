@@ -3,7 +3,6 @@
 namespace Deepcube\HandoffImageUpload;
 
 use Deepcube\HandoffImageUpload\Commands\CleanupTempImagesCommand;
-use Deepcube\HandoffImageUpload\Commands\HandoffImageUploadCommand;
 use Deepcube\HandoffImageUpload\Livewire\HandoffImageUploadComponent;
 use Deepcube\HandoffImageUpload\Testing\TestsHandoffImageUpload;
 use Filament\Support\Assets\AlpineComponent;
@@ -120,7 +119,6 @@ class HandoffImageUploadServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            HandoffImageUploadCommand::class,
             CleanupTempImagesCommand::class,
         ];
     }

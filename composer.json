@@ -1,29 +1,50 @@
 {
     "name": "deepcube/handoff-image-upload",
-    "description": "This is my package handoff-image-upload",
+    "description": "A powerful Filament component for image uploads with camera capture, QR code sharing, and temporary file management for Laravel applications",
+    "type": "library",
     "keywords": [
-        "deepcube",
         "laravel",
-        "handoff-image-upload"
+        "filament",
+        "filamentphp",
+        "image-upload",
+        "camera-capture",
+        "qr-code",
+        "mobile-upload",
+        "temporary-files",
+        "forms",
+        "component",
+        "deepcube"
     ],
-    "homepage": "https://github.com/deepcube/handoff-image-upload",
+    "homepage": "https://github.com/deepcube-srl/handoff-image-upload",
     "support": {
-        "issues": "https://github.com/deepcube/handoff-image-upload/issues",
-        "source": "https://github.com/deepcube/handoff-image-upload"
+        "issues": "https://github.com/deepcube-srl/handoff-image-upload/issues",
+        "source": "https://github.com/deepcube-srl/handoff-image-upload",
+        "docs": "https://github.com/deepcube-srl/handoff-image-upload#readme"
     },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/deepcube-srl"
+        }
+    ],
     "license": "MIT",
     "authors": [
         {
             "name": "Deepcube Srl",
-            "email": "developer@deepcube.eu",
+            "email": "tech@deepcube.eu",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
+        "illuminate/contracts": "^10.0|^11.0",
         "filament/filament": "^3.3",
         "filament/forms": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0"
+    },
+    "suggest": {
+        "intervention/image": "Required for image manipulation and processing",
+        "spatie/laravel-medialibrary": "Advanced media management capabilities"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -73,6 +94,6 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
