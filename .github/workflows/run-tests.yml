@@ -19,7 +19,7 @@ jobs:
         include:
           - laravel: 12.*
             testbench: 8.*
-            carbon: 2.*
+            carbon: 3.*
 
     name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
